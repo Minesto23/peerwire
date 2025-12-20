@@ -5,6 +5,9 @@ A BitTorrent client written **from scratch** in Go, using **only the standard li
 This project is focused on learning and implementing the BitTorrent protocol
 at a low level: binary parsing, networking, concurrency, and file integrity.
 
+📘 [Protocol Overview](docs/protocol.md)
+
+
 ## Goals
 - Zero external dependencies
 - Full control over protocol implementation
