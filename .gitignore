@@ -1,0 +1,17 @@
+# Go
+/bin/
+/dist/
+*.exe
+*.test
+*.out
+
+# Editors
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Test data
+*.torrent
+*.iso
