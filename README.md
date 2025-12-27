@@ -15,6 +15,7 @@
     -   TCP Peer Wire Protocol (Handshake, Choke, Interested, Have, Bitfield, Request, Piece, Cancel).
     -   HTTP & UDP Tracker Protocols (with multi-tracker scaling and auto-retry).
 -   **Modern GUI**: A sleek, dark-themed local web interface with glassmorphism design and real-time progress updates.
+-   **Directory Selection**: Integrated server-side directory picker to easily choose download destinations.
 -   **Resilience**:
     -   **Peer Supervisor**: Automatically detects stalled peers and reconnects.
     -   **Multi-Tracker**: Attempts to connect to all trackers in the torrent's `announce-list`.
@@ -40,14 +41,15 @@ go build -o peerwire-gui cmd/peerwire-gui/main.go
 
 ### Graphical Interface (GUI)
 
-The easiest way to use PeerWire is via the web interface.
+The easiest way to use PeerWire is via the modern web interface.
 
 1.  Run the GUI binary:
     ```bash
     ./peerwire-gui
     ```
 2.  Open your browser to [http://localhost:8080](http://localhost:8080).
-3.  Drag and drop a `.torrent` file to start downloading.
+3.  **Browse** to select your desired download folder.
+4.  Drag and drop a `.torrent` file to start downloading.
 
 ### Command Line Interface (CLI)
 
