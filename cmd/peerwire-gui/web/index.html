@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeerWire Client</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="card glass">
+            <header>
+                <h1>PeerWire</h1>
+                <div class="status-badge" id="connectionStatus">Connected</div>
+            </header>
+
+            <section class="add-torrent-section">
+                <h2>Add New Torrent</h2>
+                <form action="/upload" method="post" enctype="multipart/form-data" id="uploadForm">
+                    <div class="upload-area" id="dropZone">
+                        <input type="file" name="torrent" accept=".torrent" required id="fileInput">
+                        <div class="upload-content">
+                            <span class="icon">📂</span>
+                            <span class="label" id="fileLabel">Drop .torrent file or click to browse</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="destination">Download Destination</label>
+                        <div class="input-row">
+                            <input type="text" name="destination" id="destination" placeholder="Select a folder..."
+                                readonly required>
+                            <button type="button" id="browseBtn" class="btn-secondary">Browse</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Start Download</button>
+                    <div id="uploadError" class="error-msg"></div>
+                </form>
+            </section>
+
+            <section class="status-section">
+                <h2>Current Task</h2>
+                <div class="status-card glass-inner">
+                    <div class="status-header">
+                        <span id="msg" class="status-message">Waiting for torrent...</span>
+                        <span id="percent" class="percentage">0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div id="bar" class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Directory Picker Modal -->
+    <div id="dirModal" class="modal hidden">
+        <div class="modal-content glass">
+            <header>
+                <h2>Select Folder</h2>
+                <button type="button" class="close-btn" id="closeModal">&times;</button>
+            </header>
+            <div class="current-path" id="currentPath">/</div>
+            <div class="folder-list" id="folderList">
+                <!-- Folders will be injected here -->
+            </div>
+            <footer>
+                <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
+                <button type="button" class="btn-primary" id="selectBtn">Select This Folder</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

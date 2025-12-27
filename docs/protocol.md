@@ -586,13 +586,3 @@ BitTorrent is:
 If you understand this, you can implement BitTorrent in any language.
 
 ---
-
-## Next Step
-
-With this complete understanding, we are ready to write code.
-
-The correct first implementation step is:
-
-👉 **Bencode decoding (byte-by-byte, from scratch)**
-
-Everything else builds on it.
