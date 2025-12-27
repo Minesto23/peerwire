@@ -14,6 +14,8 @@
     -   Bencode encoding/decoding.
     -   TCP Peer Wire Protocol (Handshake, Choke, Interested, Have, Bitfield, Request, Piece, Cancel).
     -   HTTP & UDP Tracker Protocols (with multi-tracker scaling and auto-retry).
+
+> For detailed technical specifications and implementation notes, please refer to the [Protocol Documentation](docs/protocol.md).
 -   **Modern GUI**: A sleek, dark-themed local web interface with glassmorphism design and real-time progress updates.
 -   **Directory Selection**: Integrated server-side directory picker to easily choose download destinations.
 -   **Resilience**:
